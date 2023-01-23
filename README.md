@@ -1,2 +1,2 @@
 # leetcode75
-leetcode 7d plan
+leetcode 75 days plan
