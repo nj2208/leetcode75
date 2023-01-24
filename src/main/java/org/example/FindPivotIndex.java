@@ -38,7 +38,7 @@ public class FindPivotIndex {
 
     public int pivotIndex(int[] nums) {
         int pivot = -1; // Assume initialy no pivot exists until proven wrong
-        if (nums.length >= 1 && nums.length <= 1000) {
+        if (nums.length >= 1 && nums.length <= 10000) {
             // Left Edge Case
             if (0 == calculateSum(nums, 1, nums.length)) {
                 System.out.println("left edge pivot");
