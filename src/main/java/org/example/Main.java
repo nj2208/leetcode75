@@ -19,7 +19,11 @@ public class Main {
         // Day 1 - Problem 2
         System.out.println("Day 1 Problem 2");
         FindPivotIndex pivotIndx = new FindPivotIndex();
-        int[] arr1 = {1,7,3,6,5,6};
+        //int[] arr1 = {1,7,3,6,5,6}; // middle
+        int[] arr1 = {-1,-1,0,1,1,0}; // right edge
+        //int[] arr1 = {-1,-1,1,1,0,0};
+        //int[] arr1 = {-1,-1,0,1,1,-1};
+        //int[] arr1 = {-1,-1,1,1,0,0};
         int pivot = pivotIndx.pivotIndex(arr1);
         System.out.println(pivot);
 

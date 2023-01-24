@@ -35,36 +35,39 @@ public class FindPivotIndex {
 
         return sum;
     }
+
     public int pivotIndex(int[] nums) {
         int pivot = -1; // Assume initialy no pivot exists until proven wrong
-        if(nums.length >= 1 && nums.length <= 1000 ) {
-                // Left Edge Case
-                if (0 == calculateSum(nums,1 , nums.length)) {
-                    System.out.println("left edge pivot");
-                    pivot = 0;
-                }
-                // Right Edge Case
-                else if (0 == calculateSum(nums,0 , nums.length -1 )) {
-                    System.out.println("right edge pivot");
-                    pivot = 0;
-                }
-                //  Not Left or right Edge Case
-                else {
-
-                    //{1,7,3,6,5,6};
-                    for (int index = 1; index < (nums.length - 1) ; index++) {
-                        System.out.println("pivot index  : " + index);
-                        int leftSum = calculateSum(nums,0 , index -1);
-                        System.out.println("leftSum : " + leftSum);
-                        int rightSum = calculateSum(nums,index + 1  , (nums.length));
-                        System.out.println("rightSum : " + rightSum);
-                        if(leftSum == rightSum) {
-                            System.out.println("middle pivot");
-                            pivot = index;
-                            break;
-                        }
+        if (nums.length >= 1 && nums.length <= 1000) {
+            // Left Edge Case
+            if (0 == calculateSum(nums, 1, nums.length)) {
+                System.out.println("left edge pivot");
+                pivot = 0;
+            }
+            else {
+                //  Middle pivot Case
+                //{1,7,3,6,5,6};
+                for (int index = 1; index < (nums.length - 1); index++) {
+                    System.out.println("pivot index  : " + index);
+                    int leftSum = calculateSum(nums, 0, index);
+                    System.out.println("leftSum : " + leftSum);
+                    int rightSum = calculateSum(nums, index + 1, (nums.length));
+                    System.out.println("rightSum : " + rightSum);
+                    if (leftSum == rightSum) {
+                        System.out.println("middle pivot");
+                        pivot = index;
+                        break;
                     }
                 }
+            }
+            // Right Edge Case
+            if(-1 == pivot) {
+                if (0 == calculateSum(nums, 0, nums.length - 1)) {
+                    System.out.println("right edge pivot");
+                    pivot = nums.length - 1;
+                }
+            }
+
         }
         return pivot;
     }
