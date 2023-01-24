@@ -1,4 +1,4 @@
-package org.example;
+package org.example.day1;
 /**
  * Given an array of integers nums, calculate the pivot index of this array.
  *

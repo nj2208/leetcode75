@@ -1,32 +1,12 @@
 package org.example;
 
+import static org.example.day1.Day1.day1;
+import static org.example.day2.Day2.day2;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Leet Code 75 Days Plan !");
-
-//        // Day 1 - Problem 1
-//        System.out.println("Day 1 Problem 1");
-//        RunningSumof1dArray array = new RunningSumof1dArray();
-//        int[] arr = new int[10];
-//        for(int i = 0; i < 10 ; i++) {
-//            arr[i] = i;
-//        }
-//        int[] retVal = array.runningSum(arr);
-//        for(int index = 0 ;index < retVal.length ; index++) {
-//            System.out.println(retVal[index]);
-//        }
-
-        // Day 1 - Problem 2
-        System.out.println("Day 1 Problem 2");
-        FindPivotIndex pivotIndx = new FindPivotIndex();
-        //int[] arr1 = {1,7,3,6,5,6}; // middle
-        //int[] arr1 = {-1,-1,0,1,1,0}; // right edge
-        //int[] arr1 = {-1,-1,1,1,0,0};
-        //int[] arr1 = {-1,-1,0,1,1,-1};
-        //int[] arr1 = {-1,-1,1,1,0,0};
-        int[] arr1 = {0};
-        int pivot = pivotIndx.pivotIndex(arr1);
-        System.out.println(pivot);
-
+        //day1();
+        day2();
     }
 }
